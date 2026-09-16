@@ -11,7 +11,7 @@ export default function Hero() {
               <span className="w-2 h-2 rounded-full bg-tertiary-fixed-dim inline-block"></span>
               <span>Pure Ceylon Tea</span>
             </div>
-            <h1 className="font-display-lg text-display-lg-mobile lg:text-display-lg text-on-surface tracking-tight mb-space-md leading-[1.15]">
+            <h1 className="font-display-lg text-display-lg-mobile lg:text-5xl text-on-surface tracking-tight mb-space-md leading-[1.15] max-w-2xl">
               From the Misty Hills of Sri Lanka to Your Cup
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-space-xl leading-relaxed">

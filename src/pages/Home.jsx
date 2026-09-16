@@ -1,7 +1,7 @@
-import Hero from "../components/Hero";
-import ServicesSection from "../components/ServicesSection";
-import TeaRegionsSection from "../components/TeaRegionsSection";
-import WelcomeSection from "../components/WelcomSection";
+import Hero from "../components/Home/Hero";
+import ServicesSection from "../components/Home/ServicesSection";
+import TeaRegionsSection from "../components/Home/TeaRegionsSection";
+import WelcomeSection from "../components/Home/WelcomSection";
 
 export default function Home() {
   return (

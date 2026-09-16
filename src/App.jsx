@@ -11,7 +11,7 @@ import NotFound from "./pages/NotFound";
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen flex flex-col justify-between pt-[76px]">
+      <div className="min-h-screen flex flex-col justify-between ">
         <Navbar />
 
         <main className="flex-1">

@@ -157,12 +157,12 @@ export default function Footer() {
             <h4 className="font-title-lg text-title-lg text-tertiary-fixed-dim">
               Estate &amp; Contact
             </h4>
-            <div className="flex flex-col gap-space-xs font-body-sm text-body-sm text-outline-variant">
+            <div className="flex flex-col  font-body-sm text-body-sm text-outline-variant gap-3">
               <div className="flex items-start gap-space-xs">
                 <span className="material-symbols-outlined text-[18px] text-tertiary-fixed-dim mt-0.5">
                   location_on
                 </span>
-                <span>Galle Face Court, Colombo 03, Sri Lanka</span>
+                <span>Galle Face, Colombo 03, Sri Lanka</span>
               </div>
               <div className="flex items-center gap-space-xs">
                 <span className="material-symbols-outlined text-[18px] text-tertiary-fixed-dim">
