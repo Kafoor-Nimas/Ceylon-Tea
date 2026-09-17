@@ -1,3 +1,5 @@
+import img from "../../assets/product.jfif";
+
 export default function ProductsHero() {
   return (
     <section className="relative w-full bg-surface-container-low overflow-hidden py-16 lg:py-24">
@@ -57,7 +59,7 @@ export default function ProductsHero() {
                 <img
                   alt="Ceylon loose black tea leaves on rustic wooden table"
                   className="w-full h-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDGdcl-ltwXVHP01_kNvxr7i6oi6SaIlMX7wVL6Hy7RhlIV2eZydk9jHra9-2z0RJa8jez3PN4bQdkXvX9qGnF-GKVzYjjTSAHZYNwJJU5MCVtmEF_j0wQNOz7DTyExpAVF8QTLxGYpyBbrAgSpvnTbnqUB987MNBf5WDFeLHBQ76x0nPjJl0Uoj-VXPlQFFFo50v9qc6nJXPO__favexTkFdPZboTyo2pxvuRTS4d9YSJwyWuhlX57Q"
+                  src={img}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent"></div>
                 <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-on-primary">

@@ -1,3 +1,6 @@
+import img from "../../assets/welcome.jfif";
+
+
 export default function WelcomeSection() {
   return (
     <section className="relative w-full py-space-xl lg:py-28 bg-surface-container-lowest">
@@ -43,7 +46,7 @@ export default function WelcomeSection() {
             <img
               alt="Handcrafted loose leaf tea preparation and traditional Ceylon tea bowl with fresh green shoots"
               className="w-full h-full min-h-[380px] object-cover rounded-xl"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuxmzZXhZIF6kuzo7yXau5tVtiDcUMABN-VOc9jtysuZEF3rJQAorY6z4bBcISsCRDcVyH8jrcACMpnamSS7J-lOqrKLZuz-DMhi0oMPqgLECyBMimDswY_Hd0-29d9nrq05HtcXo6xrh5Met9dxyKZdp76mkcNrg4nMelWcx-_hHL3au8sNiS9El22HUqS7sPY8VqFhGdLRjks46Z8yd5WwZsqJImtBFh2bYE9hpS2pDb1K8GpLYjiQ"
+              src={img}
             />
           </div>
           <div className="lg:col-span-5 flex flex-col justify-between p-space-lg lg:p-space-xl bg-surface-container-low rounded-2xl shadow-sm">

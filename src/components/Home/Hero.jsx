@@ -1,3 +1,5 @@
+import img from "../../assets/company.jfif";
+
 export default function Hero() {
   return (
     <section className="relative w-full overflow-hidden bg-surface py-space-xl lg:py-24">
@@ -81,7 +83,7 @@ export default function Hero() {
               <img
                 alt="Panoramic vista of misty Sri Lankan highland tea estate"
                 className="w-full h-[460px] lg:h-[540px] object-cover rounded-xl transition-transform duration-700 hover:scale-105"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjlYB4hf7v8yHyJDq9s8LPITtTQZTDc_dPspQ0ZMqqqJ5wYc6ne53FJWAgCkYqYt5SCjdKuswwHdWWPrvxXmFckcPx5MURJrL8WCZjulBpzn6BbKpfUuHVeY_886eHD8zx4Kt_a7MB5nwg5vYBQk0KkKGa73OwWjt5iyusTYQS-Q6MzWtMBs1KqUnp0dQmSn-5G7aEOruKfPldRbvg_SudYTbWIhhtSZotB68QtbQPsmV03XsF0IuU4w"
+                src={img}
               />
               {/* Single Origin Floating Badge */}
               <div className="absolute bottom-6 left-6 right-6 bg-surface-container-lowest/95 backdrop-blur-md p-space-md rounded-xl shadow-lg flex items-center gap-space-md">
