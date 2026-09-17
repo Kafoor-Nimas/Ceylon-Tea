@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <footer className="w-full bg-primary text-on-primary border-t border-outline-variant/20">
@@ -8,9 +10,9 @@ export default function Footer() {
               <span className="material-symbols-outlined text-tertiary-fixed-dim text-[28px]">
                 eco
               </span>
-              <span className="font-headline-sm text-headline-sm text-surface-container-lowest font-medium tracking-tight">
+              <Link className="font-headline-sm text-headline-sm text-surface-container-lowest font-medium tracking-tight" to={"/"}>
                 Ceylon Tea
-              </span>
+              </Link>
             </div>
             <p className="font-body-sm text-body-sm text-outline-variant leading-relaxed max-w-sm">
               Sharing the authentic taste and tradition of Sri Lankan
@@ -62,49 +64,49 @@ export default function Footer() {
             </h4>
             <ul className="flex flex-col gap-space-xs font-body-sm text-body-sm text-outline-variant">
               <li>
-                <a
+                <Link
                   className="hover:text-surface-container-lowest transition-colors"
                   data-path="home"
-                  href="#"
+                  to={"/about"}
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="hover:text-surface-container-lowest transition-colors"
                   data-path="about"
-                  href="#"
+                  to={"/about"}
                 >
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="hover:text-surface-container-lowest transition-colors"
                   data-path="services"
-                  href="#"
+                  to={"/services"}
                 >
-                  Tasting &amp; Services
-                </a>
+                  Services
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="hover:text-surface-container-lowest transition-colors"
                   data-path="products"
-                  href="#"
+                  to={"/products"}
                 >
-                  Tea Estates &amp; Products
-                </a>
+                  Products
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="hover:text-surface-container-lowest transition-colors"
                   data-path="contact"
-                  href="#"
+                  to={"/contact"}
                 >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import img from "../../assets/company.jfif";
 
 export default function Hero() {
@@ -23,23 +24,23 @@ export default function Hero() {
               heritage.
             </p>
             <div className="flex flex-wrap items-center gap-space-md w-full sm:w-auto">
-              <a
+              <Link
                 className="inline-flex items-center justify-center gap-space-xs px-8 py-3.5 rounded-xl bg-primary-container text-surface-container-lowest font-label-md text-label-md uppercase tracking-wider hover:bg-primary transition-all duration-300 shadow-md hover:shadow-lg group"
                 data-path="products"
-                href="#"
+                to={"/products"}
               >
                 <span>Explore Our Teas</span>
                 <span className="material-symbols-outlined text-[18px] text-tertiary-fixed-dim transition-transform group-hover:translate-x-1">
                   arrow_forward
                 </span>
-              </a>
-              <a
+              </Link>
+              <Link
                 className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl bg-surface-container-lowest text-primary font-label-md text-label-md uppercase tracking-wider hover:bg-surface-container transition-all duration-300 shadow-sm"
                 data-path="about"
-                href="#"
+                to={"/about"}
               >
                 <span>Our Story</span>
-              </a>
+              </Link>
             </div>
 
             {/* Quick Highland Metrics Bar */}
