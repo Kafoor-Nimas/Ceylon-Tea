@@ -1,5 +1,5 @@
+import { Link } from "react-router-dom";
 import img from "../../assets/welcome.jfif";
-
 
 export default function WelcomeSection() {
   return (
@@ -28,16 +28,16 @@ export default function WelcomeSection() {
             select and prepare premium tea leaves to bring the authentic taste
             of Sri Lanka to tea lovers around the world.
           </p>
-          <a
+          <Link
             className="mt-space-lg inline-flex items-center gap-space-xs px-8 py-3.5 rounded-xl bg-surface-container text-primary font-label-md text-label-md uppercase tracking-wider hover:bg-primary hover:text-on-primary transition-all duration-300 shadow-sm"
             data-path="about"
-            href="#"
+            to={"/about"}
           >
             <span>Discover Our Story</span>
             <span className="material-symbols-outlined text-[18px]">
               menu_book
             </span>
-          </a>
+          </Link>
         </div>
 
         {/* Bento Grid */}

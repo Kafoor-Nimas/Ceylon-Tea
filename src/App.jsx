@@ -7,10 +7,12 @@ import Services from "./pages/Services";
 import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <div className="min-h-screen flex flex-col justify-between ">
         <Navbar />
 

@@ -27,7 +27,7 @@ export default function ContactMapSection() {
   const currentMap = mapData[activeTab];
 
   return (
-    <section className="w-full py-16 bg-surface-container-low/60">
+    <section className="w-full py-16 bg-surface-container-low/60 hidden md:block">
       <div className="max-w-[1600px] mx-auto px-margin lg:px-margin-desktop">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
@@ -76,7 +76,7 @@ export default function ContactMapSection() {
           <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/20 pointer-events-none"></div>
 
           {/* Floating Info Box */}
-          <div className="absolute bottom-6 left-6 right-6 md:right-auto md:w-[440px] p-6 rounded-xl bg-surface-container-lowest/95 backdrop-blur-md shadow-2xl text-on-surface">
+          <div className="absolute bottom-6 left-6 right-6 md:right-auto md:w-[440px] p-6 rounded-xl bg-surface-container-lowest/95 backdrop-blur-md shadow-2xl text-on-surface hidden xl:block">
             <div className="flex items-center gap-2 mb-2">
               <span
                 className="material-symbols-outlined text-primary text-[20px]"
