@@ -22,6 +22,7 @@ export default function AdminSidebar() {
 
         {/* Navigation Links */}
         <nav className="flex flex-col gap-space-xs px-space-sm mt-space-md">
+          {/* 1. Dashboard */}
           <Link
             className={`flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-colors ${
               isActive("/admin")
@@ -36,6 +37,22 @@ export default function AdminSidebar() {
             <span>Dashboard</span>
           </Link>
 
+          {/* 2. Add Product */}
+          <Link
+            className={`flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-colors ${
+              isActive("/admin/products/add")
+                ? "bg-primary-container text-on-primary font-medium"
+                : "text-surface-variant hover:bg-primary-container/60 hover:text-on-primary"
+            }`}
+            to="/admin/products/add"
+          >
+            <span className="material-symbols-outlined text-[20px]">
+              add_circle
+            </span>
+            <span>Add Product</span>
+          </Link>
+
+          {/* 3. Products */}
           <Link
             className={`flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-colors ${
               isActive("/admin/products")
@@ -50,6 +67,7 @@ export default function AdminSidebar() {
             <span>Products</span>
           </Link>
 
+          {/* 4. Orders */}
           <Link
             className={`flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-colors ${
               isActive("/admin/orders")

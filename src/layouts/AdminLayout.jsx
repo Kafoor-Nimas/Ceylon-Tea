@@ -5,7 +5,7 @@ import AdminSidebar from "../components/Admin/AdminSidebar";
 
 function AdminLayout() {
   return (
-    <div className="min-h-screen bg-gray-50 flex">
+    <div className="min-h-screen bg-background flex">
       {/* Fixed Sidebar */}
       <AdminSidebar />
 

@@ -13,7 +13,7 @@ import AdminDashboard from "./pages/admin/AdminDashboard";
 import AdminLayout from "./layouts/AdminLayout";
 
 // Admin Layout & Pages
-
+import AddProduct from "./pages/admin/AddProduct";
 
 function App() {
   return (
@@ -31,6 +31,7 @@ function App() {
         {/* 2. Admin Panel Routes (Nested inside AdminLayout) */}
         <Route path="/admin" element={<AdminLayout />}>
           <Route index element={<AdminDashboard />} />
+          <Route path="products/add" element={<AddProduct />} />
           {/* <Route path="products" element={<AdminProducts />} /> */}
           {/* <Route path="orders" element={<AdminOrders />} /> */}
         </Route>
