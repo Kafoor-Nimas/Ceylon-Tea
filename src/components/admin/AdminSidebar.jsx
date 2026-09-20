@@ -10,14 +10,9 @@ export default function AdminSidebar() {
       <div className="flex flex-col">
         {/* Brand Header */}
         <div className="h-16 flex items-center gap-space-sm px-gutter border-b border-primary-container/40">
-          <img
-            alt="Ceylon Tea Admin Brand Logo"
-            className="h-8 w-auto object-contain"
-            src="https://lh3.googleusercontent.com/aida/AEtjO1X-2Gfg009E24t3CPpyd9GliIEUa2ed9fU6C0nDxjA_rUndCWI_fFgLpfUSn8d-wFQ1wgl6fljF6uTtSXZdUPBO0CJ8k9jyqK80LNprEFEVc8n8Xn8XeNWJn6qM4Nn_1T00cOICaQCLe6C2b_G3o97mwRomdyOjz8FgCG4gZE2KZsxi5kBmqvyupUIkzalHAHZVeyvNXKcOc-L7YF_HwY6bFLSduL6TZds2xmX_MP24tUx0u0ziDUYG19WE"
-          />
           <div className="flex flex-col">
-            <span className="font-title-lg text-title-lg text-on-primary leading-none">
-              Ceylon
+            <span className="font-title-lg text-2xl text-on-primary leading-none">
+              Ceylon Tea
             </span>
             <span className="font-label-sm text-label-sm tracking-widest uppercase text-tertiary-fixed-dim">
               Admin

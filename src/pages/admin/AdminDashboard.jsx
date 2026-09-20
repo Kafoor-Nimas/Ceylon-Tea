@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import AdminSidebar from "../components/AdminSidebar";
-import AdminHeader from "../components/AdminHeader";
-import AdminStatsCards from "../components/AdminStatsCards";
-import AdminQuickActions from "../components/AdminQuickActions";
-import AdminRecentOrders from "../components/AdminRecentOrders";
+
+import AdminSidebar from "../../components/Admin/AdminSidebar";
+import AdminHeader from "../../components/Admin/AdminHeader";
+import AdminStatsCards from "../../components/Admin/AdminStatsCards";
+import AdminQuickActions from "../../components/Admin/AdminQuickActions";
+import AdminRecentOrders from "../../components/Admin/AdminRecentOrders";
 
 export default function AdminDashboard() {
   return (

@@ -1,18 +1,19 @@
 import { Outlet } from "react-router-dom";
-import AdminSidebar from "../admin/components/AdminSidebar";
+
 import AdminHeader from "../components/Admin/AdminHeader";
+import AdminSidebar from "../components/Admin/AdminSidebar";
 
 function AdminLayout() {
   return (
-    <div className="bg-background font-body-md text-body-md text-on-surface antialiased min-h-screen">
+    <div className="min-h-screen bg-gray-50 flex">
       {/* Fixed Sidebar */}
       <AdminSidebar />
 
-      <div className="pl-64 min-h-screen flex flex-col">
+      <div className="flex-1">
         {/* Fixed Header */}
         <AdminHeader />
 
-        <main className="w-full pt-16 flex-1 px-gutter py-space-lg bg-background">
+        <main className="p-6">
           <Outlet />
         </main>
       </div>

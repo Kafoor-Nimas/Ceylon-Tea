@@ -1,34 +1,43 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+
+// Public Store Layout & Pages
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import ScrollToTop from "./components/ScrollToTop";
+import PublicLayout from "./layouts/PublicLayout";
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import AdminLayout from "./layouts/AdminLayout";
+
+// Admin Layout & Pages
+
 
 function App() {
   return (
     <BrowserRouter>
-    <ScrollToTop />
-      <div className="min-h-screen flex flex-col justify-between ">
-        <Navbar />
+      <ScrollToTop />
+      <Routes>
+        <Route element={<PublicLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/contact" element={<Contact />} />
+        </Route>
 
-        <main className="flex-1">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </main>
+        {/* 2. Admin Panel Routes (Nested inside AdminLayout) */}
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route index element={<AdminDashboard />} />
+          {/* <Route path="products" element={<AdminProducts />} /> */}
+          {/* <Route path="orders" element={<AdminOrders />} /> */}
+        </Route>
 
-        <Footer />
-      </div>
+        {/* 3. Catch-all Not Found Route */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </BrowserRouter>
   );
 }

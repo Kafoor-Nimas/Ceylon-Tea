@@ -92,8 +92,12 @@ export default function AdminRecentOrders() {
         <table className="w-full text-left border-collapse">
           <thead>
             <tr className="bg-surface-container-low text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">
-              <th className="py-space-sm px-space-md font-semibold">Order ID</th>
-              <th className="py-space-sm px-space-md font-semibold">Customer</th>
+              <th className="py-space-sm px-space-md font-semibold">
+                Order ID
+              </th>
+              <th className="py-space-sm px-space-md font-semibold">
+                Customer
+              </th>
               <th className="py-space-sm px-space-md font-semibold">Date</th>
               <th className="py-space-sm px-space-md font-semibold">Total</th>
               <th className="py-space-sm px-space-md font-semibold">Status</th>
