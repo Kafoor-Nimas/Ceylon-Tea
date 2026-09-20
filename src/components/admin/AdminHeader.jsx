@@ -9,11 +9,7 @@ export default function AdminHeader() {
         >
           menu
         </button>
-        <img
-          alt="Ceylon Tea Brand Logo"
-          className="h-8 w-auto object-contain lg:hidden"
-          src="https://lh3.googleusercontent.com/aida/AEtjO1X-2Gfg009E24t3CPpyd9GliIEUa2ed9fU6C0nDxjA_rUndCWI_fFgLpfUSn8d-wFQ1wgl6fljF6uTtSXZdUPBO0CJ8k9jyqK80LNprEFEVc8n8Xn8XeNWJn6qM4Nn_1T00cOICaQCLe6C2b_G3o97mwRomdyOjz8FgCG4gZE2KZsxi5kBmqvyupUIkzalHAHZVeyvNXKcOc-L7YF_HwY6bFLSduL6TZds2xmX_MP24tUx0u0ziDUYG19WE"
-        />
+
         <span className="font-label-md text-label-md uppercase tracking-wider text-secondary">
           Portal Management
         </span>

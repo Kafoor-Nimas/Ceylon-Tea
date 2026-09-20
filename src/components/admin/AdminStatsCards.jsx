@@ -14,7 +14,7 @@ export default function AdminStatsCards() {
           </div>
         </div>
         <div className="flex items-baseline gap-2">
-          <span className="font-headline-lg text-headline-lg text-on-surface leading-none">
+          <span className="font-headline-lg text-5xl text-on-surface leading-none">
             12
           </span>
           <span className="font-label-sm text-label-sm text-secondary font-semibold flex items-center">
@@ -45,7 +45,7 @@ export default function AdminStatsCards() {
           </div>
         </div>
         <div className="flex items-baseline gap-2">
-          <span className="font-headline-lg text-headline-lg text-on-surface leading-none">
+          <span className="font-headline-lg text-5xl text-on-surface leading-none">
             48
           </span>
           <span className="font-label-sm text-label-sm text-primary font-semibold flex items-center">
@@ -78,7 +78,7 @@ export default function AdminStatsCards() {
           </div>
         </div>
         <div className="flex items-baseline gap-2">
-          <span className="font-headline-lg text-headline-lg text-on-surface leading-none">
+          <span className="font-headline-lg text-5xl text-on-surface leading-none">
             8
           </span>
           <span className="font-label-sm text-label-sm bg-tertiary-fixed text-tertiary px-2 py-0.5 rounded-full font-semibold">
@@ -108,7 +108,7 @@ export default function AdminStatsCards() {
           </div>
         </div>
         <div className="flex items-baseline gap-2">
-          <span className="font-headline-lg text-headline-lg text-on-surface leading-none">
+          <span className="font-headline-lg text-5xl text-on-surface leading-none">
             $4,280
           </span>
           <span className="font-label-sm text-label-sm text-secondary font-semibold">

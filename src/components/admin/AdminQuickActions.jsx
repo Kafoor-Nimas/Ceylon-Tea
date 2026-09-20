@@ -4,7 +4,7 @@ export default function AdminQuickActions() {
   return (
     <div className="mb-space-lg">
       <div className="flex items-center justify-between mb-space-sm">
-        <h2 className="font-title-lg text-title-lg text-on-surface">
+        <h2 className="font-title-lg text-2xl text-on-surface">
           Quick Actions
         </h2>
         <span className="font-label-sm text-label-sm uppercase tracking-wider text-outline">
@@ -23,7 +23,7 @@ export default function AdminQuickActions() {
               <span className="material-symbols-outlined text-[24px]">add</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-headline-sm text-headline-sm text-on-surface leading-tight mb-0.5">
+              <span className="font-headline-sm text-3xl text-on-surface leading-tight mb-0.5">
                 Add Product
               </span>
               <span className="font-body-sm text-body-sm text-on-surface-variant">
@@ -48,7 +48,7 @@ export default function AdminQuickActions() {
               </span>
             </div>
             <div className="flex flex-col">
-              <span className="font-headline-sm text-headline-sm text-on-surface leading-tight mb-0.5">
+              <span className="font-headline-sm text-3xl text-on-surface leading-tight mb-0.5">
                 Manage Products
               </span>
               <span className="font-body-sm text-body-sm text-on-surface-variant">
@@ -73,7 +73,7 @@ export default function AdminQuickActions() {
               </span>
             </div>
             <div className="flex flex-col">
-              <span className="font-headline-sm text-headline-sm text-on-surface leading-tight mb-0.5">
+              <span className="font-headline-sm text-3xl text-on-surface leading-tight mb-0.5">
                 Manage Orders
               </span>
               <span className="font-body-sm text-body-sm text-on-surface-variant">

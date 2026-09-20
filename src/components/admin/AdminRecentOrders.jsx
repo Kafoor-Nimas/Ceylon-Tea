@@ -69,7 +69,7 @@ export default function AdminRecentOrders() {
       {/* Table Header */}
       <div className="px-space-md py-space-md flex items-center justify-between bg-surface-container-lowest">
         <div>
-          <h2 className="font-title-lg text-title-lg text-on-surface">
+          <h2 className="font-title-lg text-2xl text-on-surface">
             Recent Orders
           </h2>
           <p className="font-body-sm text-body-sm text-on-surface-variant">
