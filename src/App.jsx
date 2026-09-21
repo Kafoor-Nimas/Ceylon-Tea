@@ -14,6 +14,10 @@ import AdminLayout from "./layouts/AdminLayout";
 
 // Admin Layout & Pages
 import AddProduct from "./pages/admin/AddProduct";
+import ManageProducts from "./pages/admin/ManageProducts";
+import ManageOrders from "./pages/admin/ManageOrders";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 function App() {
   return (
@@ -32,9 +36,12 @@ function App() {
         <Route path="/admin" element={<AdminLayout />}>
           <Route index element={<AdminDashboard />} />
           <Route path="products/add" element={<AddProduct />} />
-          {/* <Route path="products" element={<AdminProducts />} /> */}
-          {/* <Route path="orders" element={<AdminOrders />} /> */}
+          <Route path="products" element={<ManageProducts />} />
+          <Route path="orders" element={<ManageOrders />} />
         </Route>
+
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
 
         {/* 3. Catch-all Not Found Route */}
         <Route path="*" element={<NotFound />} />

@@ -79,7 +79,7 @@ export default function AddProduct() {
   };
 
   return (
-    <div className="flex flex-col w-full bg-background">
+    <div className="flex flex-col w-full bg-background pt-12">
       <div className="pl-60 max-w-[1500px] mx-auto w-full flex flex-col gap-space-lg pb-16">
         {/* Top Back Bar */}
         <div className="flex items-center justify-between">
