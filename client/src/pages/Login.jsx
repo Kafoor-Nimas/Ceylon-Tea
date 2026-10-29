@@ -2,6 +2,10 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import loginImg from "../assets/login.jfif";
 
+// Firebase Auth Imports
+import { signInWithPopup } from "firebase/auth";
+import { auth, googleProvider } from "../config/firebase";
+
 export default function Login() {
   const navigate = useNavigate();
 
@@ -21,17 +25,31 @@ export default function Login() {
 
     setIsSubmitting(true);
 
-    // Simulate Auth API Request
     setTimeout(() => {
       setIsSubmitting(false);
-      navigate("/admin"); // Redirect to Admin Dashboard upon login
+      navigate("/admin");
     }, 900);
   };
 
-  const handleGoogleSignIn = () => {
-    console.info(
-      "Initiating secure OAuth2 handshake with Google Identity Service...",
-    );
+  // Google Sign-In Handler
+  const handleGoogleSignIn = async () => {
+    try {
+      setIsSubmitting(true);
+      const result = await signInWithPopup(auth, googleProvider);
+      const user = result.user;
+
+      console.log("Authenticated User:", user.displayName, user.email);
+
+      // Retrieve ID Token for backend verification
+      const idToken = await user.getIdToken();
+      console.log("Firebase ID Token:", idToken);
+
+      navigate("/admin");
+    } catch (error) {
+      console.error("Google Auth Error:", error.message);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -54,11 +72,9 @@ export default function Login() {
           <div className="w-full max-w-[1200px] bg-surface-container-lowest rounded-2xl shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 relative">
             {/* Left Column: Terroir Storytelling */}
             <div className="lg:col-span-6 xl:col-span-5 bg-primary text-on-primary p-8 md:p-12 lg:p-14 flex flex-col justify-between relative overflow-hidden">
-              {/* Ambient Decorative Backdrop Rings */}
               <div className="absolute -right-24 -top-24 w-80 h-80 rounded-full bg-secondary-container/10 blur-3xl pointer-events-none"></div>
               <div className="absolute -left-20 -bottom-20 w-72 h-72 rounded-full bg-tertiary-fixed-dim/10 blur-2xl pointer-events-none"></div>
 
-              {/* Top Emblem & Prestige Badge */}
               <div className="relative z-10 space-y-6">
                 <div className="flex items-center gap-3">
                   <span className="font-headline-sm text-2xl text-white tracking-tight ">
@@ -70,7 +86,6 @@ export default function Login() {
                   </span>
                 </div>
 
-                {/* Terroir Imagery Showcase */}
                 <div className="relative mt-6 overflow-hidden rounded-xl shadow-lg group">
                   <img
                     alt="Hand-plucked high-grown Ceylon tea leaves"
@@ -84,7 +99,6 @@ export default function Login() {
                   </span>
                 </div>
 
-                {/* Narrative Section */}
                 <div className="space-y-3 pt-2">
                   <h1 className="font-headline-md text-4xl text-surface-container-lowest font-medium tracking-tight leading-tight">
                     A Tradition Brewed in Every Leaf
@@ -97,7 +111,6 @@ export default function Login() {
                 </div>
               </div>
 
-              {/* Cellar Privileges */}
               <div className="relative z-10 pt-8 mt-6 space-y-4">
                 <div className="h-[1px] w-full bg-secondary-container/15 mb-4"></div>
                 <div className="flex items-start gap-3.5">
@@ -154,7 +167,6 @@ export default function Login() {
             {/* Right Column: Clean Sign-in Form */}
             <div className="lg:col-span-6 xl:col-span-7 bg-surface-container-lowest p-8 md:p-12 lg:p-16 flex flex-col justify-between">
               <div className="w-full max-w-lg mx-auto my-auto space-y-8">
-                {/* Heading Block */}
                 <div className="space-y-2">
                   <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary">
                     Terroir Account
@@ -167,9 +179,7 @@ export default function Login() {
                   </p>
                 </div>
 
-                {/* Login Form */}
                 <form className="space-y-5" onSubmit={handleSubmit}>
-                  {/* Email Field */}
                   <div className="space-y-1.5">
                     <label
                       className="block font-label-md text-label-md text-on-surface"
@@ -195,7 +205,6 @@ export default function Login() {
                     </div>
                   </div>
 
-                  {/* Password Field */}
                   <div className="space-y-1.5">
                     <div className="flex items-center justify-between">
                       <label
@@ -239,7 +248,6 @@ export default function Login() {
                     </div>
                   </div>
 
-                  {/* Options Row */}
                   <div className="flex items-center justify-between pt-1">
                     <label className="flex items-center gap-2.5 cursor-pointer select-none">
                       <input
@@ -256,7 +264,6 @@ export default function Login() {
                     </label>
                   </div>
 
-                  {/* Submit Button */}
                   <div className="pt-2 space-y-3">
                     <button
                       className="w-full py-3.5 px-6 rounded-xl bg-primary-container text-on-primary font-body-md text-body-md font-medium flex items-center justify-center gap-2 hover:bg-primary transition-all duration-300 shadow-md group disabled:opacity-70"
@@ -298,7 +305,6 @@ export default function Login() {
                   </div>
                 </form>
 
-                {/* Divider */}
                 <div className="relative flex items-center justify-center">
                   <div className="w-full h-[1px] bg-surface-container-highest"></div>
                   <span className="absolute px-3 bg-surface-container-lowest font-label-sm text-label-sm uppercase tracking-widest text-outline">
@@ -306,10 +312,11 @@ export default function Login() {
                   </span>
                 </div>
 
-                {/* Google SSO */}
+                {/* Google SSO Button linked to handleGoogleSignIn */}
                 <div>
                   <button
-                    className="w-full py-3 px-5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-body-md text-body-md flex items-center justify-center gap-3 transition-colors shadow-sm"
+                    className="w-full py-3 px-5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-body-md text-body-md flex items-center justify-center gap-3 transition-colors shadow-sm disabled:opacity-50"
+                    disabled={isSubmitting}
                     type="button"
                     onClick={handleGoogleSignIn}
                   >
@@ -337,7 +344,6 @@ export default function Login() {
                   </button>
                 </div>
 
-                {/* Footer Switch Links */}
                 <div className="pt-2 text-center space-y-4">
                   <p className="font-body-sm text-body-sm text-on-surface-variant">
                     Don't have an estate account?
@@ -360,7 +366,6 @@ export default function Login() {
                 </div>
               </div>
 
-              {/* Trust Badge Footer */}
               <div className="w-full pt-8 mt-6 border-t border-transparent text-center lg:text-left flex flex-col sm:flex-row items-center justify-between text-outline text-label-sm font-label-sm gap-2">
                 <span className="flex items-center gap-1.5">
                   <span className="material-symbols-outlined text-[16px] text-secondary">
@@ -377,7 +382,6 @@ export default function Login() {
         </div>
       </main>
 
-      {/* Footer Links */}
       <footer className="w-full py-6 text-center">
         <div className="flex items-center justify-center gap-6 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
           <Link className="hover:text-primary transition-colors" to="/privacy">
